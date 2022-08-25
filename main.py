@@ -25,4 +25,7 @@ driver = lauchdriver()
 cookies_button = driver.find_element(By.CLASS_NAME, "jad_cmp_paywall_button-cookies")
 cookies_button.click()
 
-#récupérer le bouton de recherche
+#récupérer le bouton de recherche pour activer la barre de recherche
+searchbar_button = driver.find_element(By.CLASS_NAME, "header__navLinkSearch")
+searchbar_button.click()
+
