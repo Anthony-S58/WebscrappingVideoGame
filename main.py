@@ -21,7 +21,6 @@ def launchdriver() :
     driver.get("https://www.jeuxvideo.com")
     return driver
 
-launchdriver()
 driver = launchdriver()
 
 #recuperer le bouton pour passer les cookies
@@ -44,3 +43,7 @@ validation_button.click()
 #récupérer la catégorie jeux
 game_categorie = driver.find_element(By.CLASS_NAME, "lien-jv")
 game_categorie.click()
+
+#récupérer tous les noms des jeux
+all_titles = driver.find_element(By.CSS_SELECTOR, "section")
+
