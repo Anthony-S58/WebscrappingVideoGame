@@ -4,13 +4,22 @@
 #pip install requests
 #pip install beautifulsoup4
 #pip install pandas
+#pip install selenium
 
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+import os
 
-#saisir l'URL
-url="https://www.jeuxvideo.com/jeux/jeu-1056358/"
-response = requests.get(url)
+#creer une variable pour declencher le driver
+def lauchdriver() :
+    driver = webdriver.Chrome()
+    driver.get("https://www.jeuxvideo.com")
+    return driver
+
+driver = lauchdriver()
 
 
