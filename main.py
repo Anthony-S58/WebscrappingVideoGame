@@ -22,6 +22,7 @@ def lauchdriver() :
 driver = lauchdriver()
 
 #recuperer le bouton pour passer les cookies
-searchbar_button = driver.find_element(By.CLASS_NAME, "jad_cmp_paywall_button-cookies")
-searchbar_button.click()
+cookies_button = driver.find_element(By.CLASS_NAME, "jad_cmp_paywall_button-cookies")
+cookies_button.click()
 
+#récupérer le bouton de recherche
