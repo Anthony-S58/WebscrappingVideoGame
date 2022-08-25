@@ -12,7 +12,6 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-import os
 
 #creer une variable pour declencher le driver
 def lauchdriver() :
@@ -22,4 +21,7 @@ def lauchdriver() :
 
 driver = lauchdriver()
 
+#recuperer le bouton pour passer les cookies
+searchbar_button = driver.find_element(By.CLASS_NAME, "jad_cmp_paywall_button-cookies")
+searchbar_button.click()
 
